@@ -61,7 +61,11 @@
 
 ## Архитектура
 
-Приложение разделено на слои и, к сожалению, содержит всего два модуля: приложение и дизайн-система. Планируется разбиение на множество модулей по фичам. Используются Clean Architecture, MVVM, принципы SOLID, UDF, KISS, DRY
+Приложение разделено на слои и модули. Вдохновением для разбиения на модули стала большая сложность поддержки текущего кода и добавления новых фич. В качестве образца послужил проект [Now in Android](https://github.com/android/nowinandroid) с его графом модулей:
+
+![Граф модулей](/assets/modularization-graph.drawio.png)
+
+Используются: Clean Architecture, MVVM, принципы SOLID, UDF, KISS, DRY
 
 ## Технологии
 
@@ -72,8 +76,9 @@ UI | Jetpack Compose
 Async | Kotlin Coroutines
 Reactive Programming | Flow + State
 Network | Retrofit + Moshi
-DB | Room
-Etc. | Firebase, App Metrica
+Data persistence | Room + Proto DataStore
+Build-logic | .toml + .kts + Build conventions
+Etc. | FCM, App Metrica, KSP, secrets
 
 ## Научные статьи и тезисы
 
