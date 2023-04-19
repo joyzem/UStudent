@@ -50,14 +50,14 @@
 Данные по статистике приведены в таблице:
 Показатель | Значение
 -- | --
-Количество уникальных пользователей | 286
+Количество уникальных пользователей | 422
 Удержание пользователя после установки | В среднем: 53,975%
 1 день | 55.6 %
 2 день | 51.3%
 3 день | 53%
 4 день | 56%
-Отсутствие критических ошибок | 98,71% (затем 100% после обновления)
-Среднее количество сессий за день | 4
+Отсутствие критических ошибок | ~100%
+Среднее количество пользователей за день | 151
 
 ## Архитектура
 
@@ -71,12 +71,12 @@
 
 ЯП | Kotlin
 -- | --
-DI | Hilt
-UI | Jetpack Compose
-Async | Kotlin Coroutines
-Reactive Programming | Flow + State
-Network | Retrofit + Moshi
-Data persistence | Room + Proto DataStore
+DI | Hilt, Koin(KMM)
+UI | Jetpack Compose (KMM)
+Async | Kotlin Coroutines (KMM) 
+Reactive Programming | Flow + State (KMM)
+Network | Retrofit + Moshi, Ktorfit + kotlinx.Serialization (KMM)
+Data persistence | Room + Proto DataStore, SQLDelight + Preferences DataStore (KMM)
 Build-logic | .toml + .kts + Build conventions
 Etc. | FCM, App Metrica, KSP, secrets
 
